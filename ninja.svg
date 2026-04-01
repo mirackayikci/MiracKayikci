@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<rect width="800" height="300" fill="#0a0a0a" rx="12"/>
+
+<defs>
+  <radialGradient id="fb1" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#ffffc8" stop-opacity="1"/>
+    <stop offset="40%" stop-color="#ff7800" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#ff2800" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="fb2" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#ffffa0" stop-opacity="1"/>
+    <stop offset="40%" stop-color="#ff5000" stop-opacity="0.85"/>
+    <stop offset="100%" stop-color="#ff1000" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<!-- ember particles -->
+<g opacity="0.7">
+  <circle cx="120" cy="260" r="2" fill="#ff6000">
+    <animate attributeName="cy" values="280;20;280" dur="3.1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="3.1s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="120;130;120" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="260" r="1.5" fill="#ff4500">
+    <animate attributeName="cy" values="280;40;280" dur="2.4s" repeatCount="indefinite" begin="0.5s"/>
+    <animate attributeName="opacity" values="0;0.8;0" dur="2.4s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <circle cx="500" cy="260" r="2.5" fill="#ff7000">
+    <animate attributeName="cy" values="280;10;280" dur="3.7s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0;1;0" dur="3.7s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="cx" values="500;488;500" dur="3.7s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="650" cy="260" r="2" fill="#ff5500">
+    <animate attributeName="cy" values="280;30;280" dur="2.8s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="opacity" values="0;0.85;0" dur="2.8s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+  <circle cx="200" cy="260" r="1.5" fill="#ff8000">
+    <animate attributeName="cy" values="280;50;280" dur="2.2s" repeatCount="indefinite" begin="0.8s"/>
+    <animate attributeName="opacity" values="0;0.7;0" dur="2.2s" repeatCount="indefinite" begin="0.8s"/>
+    <animate attributeName="cx" values="200;212;200" dur="2.2s" repeatCount="indefinite" begin="0.8s"/>
+  </circle>
+  <circle cx="720" cy="260" r="2" fill="#ff6500">
+    <animate attributeName="cy" values="280;25;280" dur="3.3s" repeatCount="indefinite" begin="0.3s"/>
+    <animate attributeName="opacity" values="0;0.9;0" dur="3.3s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+</g>
+
+<!-- fireball 1: left to right -->
+<g filter="url(#glow)">
+  <circle cx="0" cy="80" r="12" fill="url(#fb1)">
+    <animate attributeName="cx" values="-20;820;-20" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="80;95;80" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="0" cy="80" r="20" fill="#ff4500" opacity="0.3">
+    <animate attributeName="cx" values="-20;820;-20" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="80;95;80" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <!-- trail -->
+  <ellipse cx="0" cy="80" rx="30" ry="6" fill="#ff3000" opacity="0.35">
+    <animate attributeName="cx" values="-35;805;-35" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="80;95;80" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+</g>
+
+<!-- fireball 2: right to left -->
+<g filter="url(#glow)">
+  <circle cx="820" cy="190" r="10" fill="url(#fb2)">
+    <animate attributeName="cx" values="820;-20;820" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="cy" values="190;175;190" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+  <circle cx="820" cy="190" r="18" fill="#ff5500" opacity="0.28">
+    <animate attributeName="cx" values="820;-20;820" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="cy" values="190;175;190" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+  <ellipse cx="820" cy="190" rx="28" ry="5" fill="#ff3500" opacity="0.3">
+    <animate attributeName="cx" values="835;-5;835" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="cy" values="190;175;190" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+  </ellipse>
+</g>
+
+<!-- fireball 3: left to right, slower -->
+<g filter="url(#glow)">
+  <circle cx="0" cy="140" r="8" fill="url(#fb1)">
+    <animate attributeName="cx" values="-20;820;-20" dur="6.5s" repeatCount="indefinite" begin="0.7s"/>
+    <animate attributeName="cy" values="140;155;140" dur="6.5s" repeatCount="indefinite" begin="0.7s"/>
+  </circle>
+  <circle cx="0" cy="140" r="15" fill="#ff6000" opacity="0.25">
+    <animate attributeName="cx" values="-20;820;-20" dur="6.5s" repeatCount="indefinite" begin="0.7s"/>
+    <animate attributeName="cy" values="140;155;140" dur="6.5s" repeatCount="indefinite" begin="0.7s"/>
+  </circle>
+</g>
+
+<!-- NINJA ASCII - sliding left and right -->
+<g font-family="monospace" font-size="9.5" fill="#e0e0e0" filter="url(#glow)">
+  <g>
+    <animate attributeName="transform" values="translate(80,0);translate(480,0);translate(80,0)" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <text y="28">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠤⠔⠒⠒⠦⠄⣀</text>
+    <text y="39">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠢⡀</text>
+    <text y="50">⠀⠀⠀⣠⣤⣤⡄⠀⠀⠀⠀⠀⣸⠁⠀⠀⣀⠀⠀⠀⠀⠀⠀⣀⠀⠀⢹⡄</text>
+    <text y="61">⠀⠀⠘⣏⣀⣤⣾⡄⠀⠀⠀⢠⡇⡰⠲⣯⣀⣀⡀⠀⠀⣀⣀⣤⠷⠲⡀⣇</text>
+    <text y="72">⠀⠀⠀⢹⠯⣤⣞⣳⡀⠀⠀⢸⠀⣇⠀⠀⠀⠉⠉⢉⠉⢉⡉⠀⠀⠀⡇⢸</text>
+    <text y="83">⠀⠀⠀⠀⢷⠧⣴⣏⣇⠀⠀⢸⠀⢹⠒⣦⣤⣄⣀⣥⣖⣉⣤⣤⠔⢺⠀⢸</text>
+    <text y="94">⠀⠀⠀⠀⠘⡟⢠⡴⣿⡆⠀⢸⠀⢸⡀⠙⢭⣽⣾⣀⣼⣿⣭⠝⠁⣸⠀⢸</text>
+    <text y="105">⠀⠀⠀⠀⠀⢱⡛⣲⠯⣽⡄⢸⠀⠏⢱⠴⠊⠁⠀⠀⠀⠈⠉⠲⣴⠙⠀⣸</text>
+    <text y="116">⠀⠀⠀⠀⠀⠀⢳⣳⣞⣷⣷⣸⡇⣞⠁⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⢹⠀⡟</text>
+    <text y="127">⠀⠀⠀⠀⠀⢀⣈⠿⣟⣫⢭⡟⠣⠸⣦⠀⠀⠀⠈⠉⠉⠀⠀⠀⢀⣾⢠⠛</text>
+    <text y="138">⠀⠀⠀⣀⣴⠿⢤⣼⡃⠀⠈⢧⠀⠀⠳⡱⣄⠀⠀⠀⢀⣿⣿⣤⣿⠃⠀⢠</text>
+    <text y="149">⠀⠀⢘⣿⠶⣄⠀⣿⣇⠀⠀⠀⠳⣀⠀⠈⠙⠓⠦⢤⣿⡟⣻⠟⠁⢀⡠⠃</text>
+    <text y="160">⠀⢀⡾⠁⠀⠈⢧⣼⡟⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⢻⠁⠙⡇⠀⠈</text>
+    <text y="171">⠀⢸⡇⠀⠀⠀⠈⣧⢣⠙⢦⠀⠀⠀⠀⠀⠀⠀⠀⡸⡞⠀⠛⣇⣀</text>
+    <text y="182">⢀⡟⢧⠀⠀⣀⠤⠾⡈⢆⠈⠙⢦⣀⠀⠀⠀⠀⢰⣧⣤⡦⠶⠧⠼⢤⣠⠞</text>
+    <text y="193">⣼⠀⠘⡆⠊⡀⠀⠀⠙⣌⢢⡀⠀⠈⠙⢶⣒⡶⠋⠙⡌⢧⠀⠀⠀⠚⠳⡄</text>
+    <text y="204">⡏⠀⠀⠀⡰⠀⠀⠀⠀⢸⣄⢑⣄⠀⢀⡠⢿⡱⡀⠀⡽⣸⣄⣷⠴⡄⢰⡇</text>
+    <text y="215">⣧⢠⠀⠀⣇⣠⣤⠖⠋⠉⠁⠀⠀⠀⠀⠀⠈⢧⠑⣴⠃⡿⠤⡽⠒⠒⠋</text>
+    <text y="226">⢹⢸⠀⢀⣽⡇⢸⠀⠀⠀⠀⠀⠀⠀⢀⡠⠂⠀⠳⣌⣾⡦⣞</text>
+    <text y="237">⠀⢻⡇⠸⠁⢧⠀⢇⠀⠀⣀⡠⠴⠚⠉⠀⠀⠀⢠⠟⠉⠀⠀⠙⢦⡀</text>
+    <text y="248">⠀⠈⡇⠀⠀⠈⢧⡈⢦⠀⠀⠀⠀⠀⠀⠀⢀⡴⢛⣟⡭⠿⠿⠿⢿⡿</text>
+    <text y="259">⠀⠀⣷⠀⠀⠀⠈⠳⣄⠑⢄⡀⠀⣀⠤⢺⠿⢂⣎⡏⠀⠀⠀⠀⠀⢹⣽</text>
+  </g>
+</g>
+
+<!-- bottom tagline -->
+<text x="400" y="285" font-family="monospace" font-size="11" fill="#ff4500" text-anchor="middle" opacity="0.9">
+  [ stay silent. stay dangerous. ]
+  <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+</text>
+
+</svg>
